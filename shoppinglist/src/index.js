@@ -6,15 +6,17 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import client from './apiConnection';
 import AddShoppinglist from './component/AddShoppinglist';
 import Shoppinglists from './component/Shoppinglists';
+import Shoppinglist from './component/Shoppinglist';
 import AddItem from './component/AddItem';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, useParams } from 'react-router-dom';
 const App = () => (
   <main>
       <Switch>
         <ApolloProvider client={client}>
         <Route path='/' component={Shoppinglists} exact/>
         <Route path='/add' component={AddShoppinglist} />
-        <Route path='/add-item' component={AddItem} />
+        <Route path='/shoppinglist/:id' component={Shoppinglist} />
+        {/* <Route path='/add-item' component={AddItem} /> */}
         </ApolloProvider>
     </Switch>
   </main>

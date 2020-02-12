@@ -5,10 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Link from '@material-ui/core/Link';
 const SHOPPINGLISTS = gql`
   {
     shoppinglists{
         name
+        id
     }
   }
 `;
@@ -27,9 +29,10 @@ export default function Shoppinglists() {
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
-        return data.shoppinglists.map(({ name }) => (
-            <ListItem button>
-                <ListItemText inset primary={name} />
-            </ListItem>
+        return data.shoppinglists.map(({ name, id }) => (
+              <Link href={"/shoppinglist/"+id}>
+                <ListItemText inset primary={name}/>
+                </Link>
+
         ));
   }

@@ -25,7 +25,6 @@ The need for the continous tracking of one's expenditure on consumables
 
 ### Prerequisites
 1. Clone repository.
-   - Create database in terminal
    ```sh
       git clone https://github.com/dkam26/react_apollo.git
    ```

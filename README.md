@@ -25,10 +25,9 @@ The need for the continous tracking of one's expenditure on consumables
 
 ### Prerequisites
 1. Clone repository.
-   - Download and install postgres from [here](https://www.postgresql.org/download/)
    - Create database in terminal
    ```sh
-      git clone https://github.com/dkam26/shoppinglistui.git
+      git clone https://github.com/dkam26/react_apollo.git
    ```
 2. Install requirements, run
 ```sh

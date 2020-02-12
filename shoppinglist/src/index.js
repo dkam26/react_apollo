@@ -4,10 +4,10 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { ApolloProvider } from '@apollo/react-hooks';
 import client from './apiConnection';
-import Shoppinglists from './component/Shoppinglists';
+import AddShoppinglist from './component/AddShoppinglist';
 const App = () => (
     <ApolloProvider client={client}>
-        <Shoppinglists/>
+        <AddShoppinglist/>
     </ApolloProvider>
   );
 

@@ -16,6 +16,7 @@ const App = () => (
         <Route path='/' component={Shoppinglists} exact/>
         <Route path='/add' component={AddShoppinglist} />
         <Route path='/shoppinglist/:id' component={Shoppinglist} />
+
         {/* <Route path='/add-item' component={AddItem} /> */}
         </ApolloProvider>
     </Switch>
